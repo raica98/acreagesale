@@ -1,0 +1,71 @@
+# Force HTTPS
+http://acreagesale.com/* https://acreagesale.com/:splat 301!
+http://www.acreagesale.com/* https://acreagesale.com/:splat 301!
+
+# Force non-www
+https://www.acreagesale.com/* https://acreagesale.com/:splat 301!
+
+# Old WordPress URLs - redirect to homepage
+/?p=* / 301
+/about-us/ /about 301
+/about-us /about 301
+
+# State pages - old URL patterns without "in" prefix
+/sell-land-fast-alabama /sell-land-fast-alabama 200
+/sell-land-fast-alaska /sell-land-fast-in-alaska/ 301!
+/sell-land-fast-arizona /sell-land-fast-in-arizona/ 301!
+/sell-land-fast-arkansas /sell-land-fast-in-arkansas/ 301!
+/sell-land-fast-california /sell-land-fast-in-california/ 301!
+/sell-land-fast-colorado /sell-land-fast-in-colorado/ 301!
+/sell-land-fast-connecticut /sell-land-fast-in-connecticut/ 301!
+/sell-land-fast-delaware /sell-land-fast-in-delaware/ 301!
+/sell-land-fast-florida /sell-land-fast-in-florida/ 301!
+/sell-land-fast-georgia /sell-land-fast-in-georgia/ 301!
+/sell-land-fast-idaho /sell-land-fast-in-idaho/ 301!
+/sell-land-fast-illinois /sell-land-fast-in-illinois/ 301!
+/sell-land-fast-indiana /sell-land-fast-in-indiana/ 301!
+/sell-land-fast-iowa /sell-land-fast-in-iowa/ 301!
+/sell-land-fast-kansas /sell-land-fast-in-kansas/ 301!
+/sell-land-fast-kentucky /sell-land-fast-in-kentucky/ 301!
+/sell-land-fast-louisiana /sell-land-fast-in-louisiana/ 301!
+/sell-land-fast-maine /sell-land-fast-in-maine/ 301!
+/sell-land-fast-maryland /sell-land-fast-in-maryland/ 301!
+/sell-land-fast-massachusetts /sell-land-fast-in-massachusetts/ 301!
+/sell-land-fast-michigan /sell-land-fast-in-michigan/ 301!
+/sell-land-fast-minnesota /sell-land-fast-in-minnesota/ 301!
+/sell-land-fast-mississippi /sell-land-fast-in-mississippi/ 301!
+/sell-land-fast-missouri /sell-land-fast-in-missouri/ 301!
+/sell-land-fast-montana /sell-land-fast-in-montana/ 301!
+/sell-land-fast-nebraska /sell-land-fast-in-nebraska/ 301!
+/sell-land-fast-nevada /sell-land-fast-in-nevada/ 301!
+/sell-land-fast-new-hampshire /sell-land-fast-in-new-hampshire/ 301!
+/sell-land-fast-new-jersey /sell-land-fast-in-new-jersey/ 301!
+/sell-land-fast-new-mexico /sell-land-fast-in-new-mexico/ 301!
+/sell-land-fast-new-york /sell-land-fast-in-new-york/ 301!
+/sell-land-fast-north-carolina /sell-land-fast-in-north-carolina/ 301!
+/sell-land-fast-north-dakota /sell-land-fast-in-north-dakota/ 301!
+/sell-land-fast-ohio /sell-land-fast-in-ohio/ 301!
+/sell-land-fast-oklahoma /sell-land-fast-in-oklahoma/ 301!
+/sell-land-fast-oregon /sell-land-fast-in-oregon/ 301!
+/sell-land-fast-pennsylvania /sell-land-fast-in-pennsylvania/ 301!
+/sell-land-fast-rhode-island /sell-land-fast-in-rhode-island/ 301!
+/sell-land-fast-south-carolina /sell-land-fast-in-south-carolina/ 301!
+/sell-land-fast-south-dakota /sell-land-fast-in-south-dakota/ 301!
+/sell-land-fast-tennessee /sell-land-fast-in-tennessee/ 301!
+/sell-land-fast-texas /sell-land-fast-in-texas/ 301!
+/sell-land-fast-utah /sell-land-fast-in-utah/ 301!
+/sell-land-fast-vermont /sell-land-fast-in-vermont/ 301!
+/sell-land-fast-virginia /sell-land-fast-in-virginia/ 301!
+/sell-land-fast-washington /sell-land-fast-in-washington/ 301!
+/sell-land-fast-wisconsin /sell-land-fast-in-wisconsin/ 301!
+/sell-land-fast-wyoming /sell-land-fast-in-wyoming/ 301!
+
+# Block parameter spam and malformed URLs
+/?list/* / 301
+/?*kg=* / 301
+
+# Noindex search pages via robots meta (handled in App)
+/properties?* /properties 200
+
+# SPA Fallback - must be last
+/*    /index.html   200

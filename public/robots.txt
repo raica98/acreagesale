@@ -1,0 +1,17 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and dashboard pages
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /edit-property/
+
+# Disallow search query parameters and parameter spam
+Disallow: /*?*search=*
+Disallow: /*?list/*
+Disallow: /*?*kg=*
+Disallow: /*?p=*
+
+# Sitemap location
+Sitemap: https://acreagesale.com/sitemap.xml
