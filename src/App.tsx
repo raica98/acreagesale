@@ -168,9 +168,10 @@ export function App() {
           if (
             errorMsg.includes('bad_jwt') ||
             errorMsg.includes('invalid JWT') ||
-            errorMsg.includes('signature is invalid')
+            errorMsg.includes('signature is invalid') ||
+            errorMsg.includes('exp')
           ) {
-            console.log('Detected invalid JWT, clearing all Supabase sessions...');
+            console.log('Detected invalid/expired JWT, clearing all Supabase sessions...');
             const allKeys = Object.keys(localStorage);
             const supabaseKeys = allKeys.filter(key =>
               key.startsWith('supabase') ||
@@ -178,8 +179,7 @@ export function App() {
               key.includes('auth-token')
             );
             supabaseKeys.forEach(key => localStorage.removeItem(key));
-            await supabase.auth.signOut();
-            window.location.reload();
+            await supabase.auth.signOut().catch(() => {});
           }
         }
       } catch (error) {

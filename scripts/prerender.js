@@ -195,7 +195,7 @@ ${JSON.stringify(structuredData, null, 2)}
   <link rel="stylesheet" crossorigin href="/assets/main-CwceampZ.css">
 </head>
 <body>
-  <div id="root">
+  <div id="app">
     <!-- Pre-rendered Content for SEO -->
     <div class="seo-content">
       <main class="container mx-auto px-4 py-8">
